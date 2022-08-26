@@ -1,0 +1,15 @@
+---
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+const { title, lead } = frontmatter;
+---
+
+<Layout title='Test post'>
+  <a href='/'>
+    <p class='mb-8'>Home</p>
+  </a>
+  <h1 class='text-4xl mb-4'>{title}</h1>
+  <p class='text-xl mb-4'>{lead}</p>
+  <slot />
+</Layout>
