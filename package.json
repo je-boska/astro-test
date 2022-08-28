@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/mdx": "^0.10.2",
     "@astrojs/react": "^1.1.0",
     "@astrojs/tailwind": "^1.0.0",
     "astro": "^1.1.0",
+    "eslint-plugin-mdx": "^2.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
