@@ -1,18 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Dropdown from '../components/Dropdown';
 
 const posts = await Astro.glob('./posts/*.md');
 ---
 
 <Layout title='Welcome to Astro.'>
   <main>
-    <h1>This is an Astro test site</h1>
-    {
-      posts.map(({ url, frontmatter }) => (
-        <a href={url}>
-          <p>{frontmatter.title}</p>
-        </a>
-      ))
-    }
+    <h1>A Bunch of English Kings</h1>
+    <div>
+      <Dropdown label='See English kings' client:visible>
+        {
+          posts.map(({ url, frontmatter }) => (
+            <a href={url}>
+              <p>{frontmatter.title}</p>
+            </a>
+          ))
+        }
+      </Dropdown>
+    </div>
   </main>
 </Layout>
